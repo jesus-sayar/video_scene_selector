@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />  
+    <title>Video Scene Selector</title> 
+
+    <!-- jQuery Library -->
+    <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"> 
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>  
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+
+    <!-- jQRangeSlider Library -->
+    <link href="../lib/iThing-min.css" rel="stylesheet" type="text/css"> 
+    <script src="../lib/jQRangeSlider-min.js"></script>
+    
+    <!-- Twitter Bootstrap Library -->
+    <link href="../lib/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"> 
+    <link href="../lib/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+    <script src="../lib/bootstrap.min.js"></script>
+    
+    <!-- Video Scene Selector -->
+    <link href="../video_scene_selector.css" rel="stylesheet" type="text/css"> 
+    <script src="../video_scene_selector.js"></script> 
+
+    <script>
+    $(function() {
+      $('#my_video').vScene({
+        onChange: function (start, end) {
+          $('#start_second').html('Sec ' + start);
+          $('#end_second').html('Sec ' + end);
+          $('#duration').html(end - start + ' seconds');
+        },
+        onSelect: function (start, end) {
+          console.log("Start: " + start + " End: " + end);
+        }
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <video controls="controls" id="my_video">
+        <source src="http://devfiles.myopera.com/articles/2642/sintel-trailer.ogv" type='video/ogg; codecs="theora, vorbis"'>
+        <source src="http://devfiles.myopera.com/articles/2642/sintel-trailer.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+      </video>
+
+      <section id="video_info">
+        <dl>
+          <dt>Start</dt>
+          <dd id="start_second"></dd>
+          <dt>End</dt>
+          <dd id="end_second"></dd>
+          <dt>Duration</dt>
+          <dd id="duration"></dd>
+        </dl>
+      </section>
+    </div>
+  </body>
+</html>

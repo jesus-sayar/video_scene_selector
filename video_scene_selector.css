@@ -1,0 +1,16 @@
+video { 
+  display: block; 
+  width: 100%;
+}
+
+#video_controls {
+  margin-top: 35px;
+  padding-top: 5px;
+}
+
+#video_controls button {
+  height: 32px;
+  margin-right: 2px;
+  font-size: 13px;
+  background: #68a1d6;
+}
