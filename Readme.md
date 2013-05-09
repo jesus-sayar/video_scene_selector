@@ -2,7 +2,7 @@
 
 HTML5 video editor for select scenes. It use a range slider to choose the scenes of a video and get the start and end seconds.
 
-# Features
+## Features
 
 + HTML5
 + Supports touch devices
@@ -15,7 +15,7 @@ HTML5 video editor for select scenes. It use a range slider to choose the scenes
 + jQRangeSlider
 + Bootstrap
 
-# Quick Start
+## Quick Start
 
 ``` html
   <link href="../video_scene_selector.css" rel="stylesheet" type="text/css"> 
@@ -43,11 +43,11 @@ HTML5 video editor for select scenes. It use a range slider to choose the scenes
   </body>
 ```
 
-##Documentation
+## Documentation
 
 *None of the parameters is mandatory.*
 
-###Callbacks
+### Callbacks
 
 <table>
   <tbody>
